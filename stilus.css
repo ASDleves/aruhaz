@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+*{
+    box-sizing: border-box;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h h h h"
+                         "n n n n"
+                         "a a a as"
+                         "f f f f";
+    padding: 20px;
+}
+header{
+    grid-area: h;
+    text-align: center;
+}
+nav{
+    grid-area: n;
+    background-color: grey;
+}
+nav ul li{
+    display: inline;
+}
+article{
+    background-color: grey;
+    display: grid;
+    grid-area: a;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+}
+.doboz{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  
+  background-color: white;
+}
+h2{
+    text-align: center;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+aside{
+    grid-area: as;
+    background-color: white;
+   
+    
+}
+footer{
+    grid-area: f;
+    background-color: white;
+    padding: 20px;
+}
