@@ -7,6 +7,7 @@ body{
     box-sizing: border-box;
 }
 main{
+    background-color: grey;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "h h h h"
@@ -18,6 +19,8 @@ main{
 header{
     grid-area: h;
     text-align: center;
+    background-color: white;
+    max-width: 100%;
 }
 nav{
     grid-area: n;
@@ -25,18 +28,27 @@ nav{
 }
 nav ul li{
     display: inline;
+    color: white;
+    padding-left: 100px;
 }
+
 article{
     background-color: grey;
     display: grid;
     grid-area: a;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 24% 24% 24% 24%;
     gap: 10px;
 }
 .doboz{
+    display: grid;
     border: 1px solid rgba(0, 0, 0, 0.8);
-  
-  background-color: white;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "c c"
+                         "k k"
+                         "l l"
+                         "g r";
+    
 }
 h2{
     text-align: center;
@@ -53,11 +65,101 @@ img{
 aside{
     grid-area: as;
     background-color: white;
-   
+    width: 300px;
+    height: 440px;
+}
+.osszar{
+    border-top: 1px solid gray;
+    text-align: center;
+}
+.egesz{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"he he" 
+                        "ko tk"
+                        "ko tk";    
+}
+.hedör{
+    grid-area: he;
+    text-align: center;
+}
+
+.Cim{
+    grid-area: c;
+}
+.kep{
+    grid-area: k;
+}
+.leiras{
+    grid-area: l;
+    text-align: center;
+}
+.Gomb{
+    grid-area: g;
+    height: 30px;
+    width: 70px;
+    margin: auto;
+
+}
+.ar{
+    grid-area: r;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
 }
-footer{
-    grid-area: f;
-    background-color: white;
-    padding: 20px;
+.ar p{
+    border: 1px solid gray;
+}
+.kosar{
+    grid-area: ko;
+}
+.termekar{
+    grid-area: tk;
+}
+@media screen and (max-width: 800px){
+    main{
+        background-color: grey;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "h h"
+                             "n n"
+                             "a as";
+        padding: 20px;
+}
+article{
+    grid-template-columns: auto auto auto;
+}
+}
+@media screen and (max-width: 700px){
+    main{
+        background-color: grey;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "h h"
+                             "n n"
+                             "a as";
+        padding: 20px;
+}
+article{
+    grid-template-columns: auto auto;
+}
+}
+@media screen and (max-width: 550px){
+    main{
+        background-color: grey;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "as"
+                             "a";
+        padding: 20px;
+}
+article{
+    grid-template-columns: auto;
+}
+nav{
+    grid-template-columns: auto;
+}
 }
